@@ -1,0 +1,35 @@
+# ignore the assignment ideas directory
+**/assignment
+
+# ignore object code and compiled code
+**/objects
+*.o
+*.d
+*.crf
+*.axf
+
+# ignore scatter files
+*.sct
+
+# ignore backups
+*.Bak
+*.bak
+
+# ignore html build logs
+*.htm
+
+# ignore dependencys
+*.dep
+
+# ignore random gui layouts 
+*.uvguix.*
+
+# ignore debug configuration
+**/DebugConfig
+*.dbgconf
+
+# ignore listings
+**/listings
+**/Listings
+*.map
+*.lst
