@@ -1,6 +1,3 @@
-# ignore the assignment ideas directory
-**/assignment
-
 # ignore object code and compiled code
 **/objects
 *.o
