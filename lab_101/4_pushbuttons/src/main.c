@@ -5,9 +5,9 @@
  * extra shu libraries such as the pinmappings list and the clock configuration
  * library)
  *
- * author:		Alex Shenfield
- * date:			01/09/2017
- * purpose:		55-604481 embedded computer networks : lab 101
+ * author:    Alex Shenfield
+ * date:      01/09/2017
+ * purpose:   55-604481 embedded computer networks : lab 101
  */
 
 // include the hal drivers
@@ -26,28 +26,28 @@ gpio_pin_t pb1 = {PI_11, GPIOI, GPIO_PIN_11};
 // this is the main method
 int main()
 {
-	// we need to initialise the hal library and set up the SystemCoreClock 
-	// properly
-	HAL_Init();
-	init_sysclk_216MHz();
-	
-	// initialise the gpio pins
-	init_gpio(led, OUTPUT);
-	init_gpio(pb1, INPUT);
-	
-	// loop forever ...
-	while(1)
-	{
-		// if the button is pressed ...
-		if(read_gpio(pb1))
-		{
-			// turn the led on on the gpio pin
-			write_gpio(led, HIGH);
-		}
-		else
-		{
-			// turn the led off on the gpio pin
-			write_gpio(led, LOW);
-		}
-	}
+  // we need to initialise the hal library and set up the SystemCoreClock 
+  // properly
+  HAL_Init();
+  init_sysclk_216MHz();
+  
+  // initialise the gpio pins
+  init_gpio(led, OUTPUT);
+  init_gpio(pb1, INPUT);
+  
+  // loop forever ...
+  while(1)
+  {
+    // if the button is pressed ...
+    if(read_gpio(pb1))
+    {
+      // turn the led on on the gpio pin
+      write_gpio(led, HIGH);
+    }
+    else
+    {
+      // turn the led off on the gpio pin
+      write_gpio(led, LOW);
+    }
+  }
 }

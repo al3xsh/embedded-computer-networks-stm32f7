@@ -5,9 +5,9 @@
  * in this case we are not implementing interrupts at all - just using the 
  * uart to output status messages.
  * 
- * author:		Alex Shenfield
- * date:			20/09/2016
- * purpose:		16-6498 embedded computer networks : lab 101
+ * author:    Alex Shenfield
+ * date:      20/09/2016
+ * purpose:   16-6498 embedded computer networks : lab 101
  */
 
 // include the basic headers for the hal drivers
@@ -17,10 +17,10 @@
 #include <stdio.h>
 
 // define the virtual com port gpio pins
-#define VCP_RX_Pin 				GPIO_PIN_7
-#define VCP_RX_GPIO_Port 	GPIOB
-#define VCP_TX_Pin 				GPIO_PIN_9
-#define VCP_TX_GPIO_Port 	GPIOA
+#define VCP_RX_Pin        GPIO_PIN_7
+#define VCP_RX_GPIO_Port  GPIOB
+#define VCP_TX_Pin        GPIO_PIN_9
+#define VCP_TX_GPIO_Port  GPIOA
 
 // declare the serial initialisation method
 void init_uart(uint32_t baud_rate);

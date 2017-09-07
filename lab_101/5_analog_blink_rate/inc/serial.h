@@ -8,9 +8,9 @@
  * the stm32f7 board allows us to send messages over the virtual com port 
  * (i.e. the usb st-link connection).
  * 
- * author:		Dr. Alex Shenfield
- * date:			01/09/2017
- * purpose:		55-604481 embedded computer networks : lab 101
+ * author:    Dr. Alex Shenfield
+ * date:      01/09/2017
+ * purpose:   55-604481 embedded computer networks : lab 101
  */
 
 // include the basic headers for the hal drivers
@@ -20,10 +20,10 @@
 #include <stdio.h>
 
 // define the virtual com port gpio pins
-#define VCP_RX_Pin 				GPIO_PIN_7
-#define VCP_RX_GPIO_Port 	GPIOB
-#define VCP_TX_Pin 				GPIO_PIN_9
-#define VCP_TX_GPIO_Port 	GPIOA
+#define VCP_RX_Pin        GPIO_PIN_7
+#define VCP_RX_GPIO_Port  GPIOB
+#define VCP_TX_Pin        GPIO_PIN_9
+#define VCP_TX_GPIO_Port  GPIOA
 
 // declare the serial initialisation method
 void init_uart(uint32_t baud_rate);
