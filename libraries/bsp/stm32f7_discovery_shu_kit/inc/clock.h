@@ -4,8 +4,8 @@
  * some utility functions for clock configuration (both for peripherals and for
  * the system clock)
  *
- * author:	alex shenfield
- * date:		01/09/2017
+ * author:  Dr. Alex Shenfield
+ * date:    01/09/2017
  */
  
 // define a symbol to prevent recursive inclusion
