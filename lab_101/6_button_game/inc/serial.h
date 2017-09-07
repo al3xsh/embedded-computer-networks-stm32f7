@@ -1,13 +1,13 @@
 /*
  * serial.h
  *
- * provide some implementation functions for our uart (uart 6 in this case).  
+ * provide some implementation functions for our uart (uart 1 in this case).  
  * in this case we are not implementing interrupts at all - just using the 
  * uart to output status messages.
  * 
- * author:    Alex Shenfield
- * date:      20/09/2016
- * purpose:   16-6498 embedded computer networks : lab 101
+ * author:    Dr. Alex Shenfield
+ * date:      01/09/2017
+ * purpose:   55-604481 embedded computer networks : lab 101
  */
 
 // include the basic headers for the hal drivers

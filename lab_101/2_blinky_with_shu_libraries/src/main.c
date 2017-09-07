@@ -5,8 +5,8 @@
  * extra shu libraries such as the pinmappings list and the clock configuration
  * library)
  *
- * author:    Alex Shenfield
- * date:      20/09/2016
+ * author:    Dr. Alex Shenfield
+ * date:      01/09/2017
  * purpose:   55-604481 embedded computer networks : lab 101
  */
 
