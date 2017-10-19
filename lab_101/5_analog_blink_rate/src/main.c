@@ -22,9 +22,9 @@
 // include the serial configuration files
 #include "serial.h"
 
-// map the led to GPIO PA8 and the potentiometer to PA0
+// map the led to GPIO PI1 and the potentiometer to PA0
 gpio_pin_t led = {PI_1, GPIOI, GPIO_PIN_1};
-gpio_pin_t pot = {PF_8, GPIOF, GPIO_PIN_8};
+gpio_pin_t pot = {PA_0, GPIOA, GPIO_PIN_0};
 
 // declare our utility functions
 void configure_gpio(void);

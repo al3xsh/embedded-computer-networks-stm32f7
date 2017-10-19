@@ -25,12 +25,12 @@
 // DECLARATIONS
 
 // leds
-gpio_pin_t led1 = {PB_8, GPIOB, GPIO_PIN_8};
-gpio_pin_t led2 = {PB_9, GPIOB, GPIO_PIN_9};
+gpio_pin_t led1 = {PI_1, GPIOI, GPIO_PIN_1};
+gpio_pin_t led2 = {PB_14, GPIOB, GPIO_PIN_14};
 
 // buttons
-gpio_pin_t pb1 = {PC_6, GPIOC, GPIO_PIN_6};
-gpio_pin_t pb2 = {PC_7, GPIOC, GPIO_PIN_7};
+gpio_pin_t pb1 = {PI_3, GPIOI, GPIO_PIN_3};
+gpio_pin_t pb2 = {PH_6, GPIOH, GPIO_PIN_6};
 
 // local game functions
 uint8_t get_led(void);
