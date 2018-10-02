@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<ProjectWorkspace xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project_mpw.xsd">
+
+  <SchemaVersion>1.0</SchemaVersion>
+
+  <Header>### uVision Project, (C) Keil Software</Header>
+
+  <WorkspaceName>WorkSpace</WorkspaceName>
+
+  <project>
+    <PathAndName>.\1_blinky\mdk-arm\blinky.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+  </project>
+
+  <project>
+    <PathAndName>.\2_blinky_with_shu_libraries\mdk-arm\blinky_with_libraries.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\3_exercises\mdk-arm\exercises.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\4_pushbuttons\mdk-arm\pushbuttons.uvprojx</PathAndName>
+  </project>
+
+  <project>
+    <PathAndName>.\5_analog_blink_rate\mdk-arm\analog_blink.uvprojx</PathAndName>
+  </project>
+
+</ProjectWorkspace>

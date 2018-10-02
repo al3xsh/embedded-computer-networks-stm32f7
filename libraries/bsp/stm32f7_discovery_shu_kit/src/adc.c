@@ -12,7 +12,7 @@
  * (corresponding to those on the arduino header).
  *
  * author: 	Dr. Alex Shenfield
- * date:		01/09/2017
+ * date:		01/09/2018
  */
  
 // include the shu library bsp adc header

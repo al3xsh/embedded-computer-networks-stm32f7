@@ -5,7 +5,7 @@
  * the system clock)
  *
  * author:  alex shenfield
- * date:    01/09/2017
+ * date:    01/09/2018
  */
  
 // include the shu library bsp clock header
