@@ -20,6 +20,7 @@
 
 # ignore random gui layouts 
 *.uvguix.*
+*.acesas13
 
 # ignore debug configuration
 **/DebugConfig
