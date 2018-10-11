@@ -9,7 +9,6 @@
 
   <project>
     <PathAndName>.\1_blinky\mdk-arm\blinky.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
   </project>
 
   <project>
@@ -18,6 +17,8 @@
 
   <project>
     <PathAndName>.\3_exercises\mdk-arm\exercises.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
