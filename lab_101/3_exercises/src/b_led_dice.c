@@ -12,12 +12,17 @@
 #include "pinmappings.h"
 #include "clock.h"
 #include "gpio.h"
+#include "random_numbers.h"
 
-// map the led to GPIO PA8
-gpio_pin_t led = {PI_1, GPIOI, GPIO_PIN_1};
+// map the led to gpio pins
+gpio_pin_t led1 = {PA_8,  GPIOA, GPIO_PIN_8};
 
 // this is the main method
 int main()
 {
+  // we need to initialise the hal library and set up the SystemCoreClock 
+  // properly
+  HAL_Init();
+  init_sysclk_216MHz();
 
 }
