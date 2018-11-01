@@ -9,6 +9,8 @@
 
   <project>
     <PathAndName>.\1_rtos_blinky\mdk-arm\blinky.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
@@ -17,11 +19,11 @@
 
   <project>
     <PathAndName>.\3_rtos_application\mdk-arm\rtos_application.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
   </project>
 
   <project>
     <PathAndName>.\4_rtos_uart\mdk-arm\rtos_uart.uvprojx</PathAndName>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>

@@ -5,7 +5,7 @@
  * a message on the lcd
  *
  * author:    Alex Shenfield
- * date:      06/09/2017
+ * date:      06/09/2018
  * purpose:   55-604481 embedded computer networks : lab 103
  */
 

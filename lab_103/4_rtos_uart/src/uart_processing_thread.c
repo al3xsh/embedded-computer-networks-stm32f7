@@ -9,7 +9,7 @@
  *   whether to turn the led on or off
  *
  * author:    Alex Shenfield
- * date:      06/09/2017
+ * date:      06/09/2018
  * purpose:   55-604481 embedded computer networks : lab 103
  */
 
@@ -41,7 +41,7 @@ osMessageQId msg_q;
 // HARDWARE DEFINES
 
 // map the led to GPIO PI2 
-gpio_pin_t led = {PI_1, GPIOI, GPIO_PIN_2};
+gpio_pin_t led = {PI_2, GPIOI, GPIO_PIN_2};
 
 // THREAD INITIALISATION
 
