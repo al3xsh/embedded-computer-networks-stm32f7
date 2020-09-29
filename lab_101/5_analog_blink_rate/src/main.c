@@ -5,8 +5,11 @@
  * extra shu libraries such as the pinmappings list, the clock configuration
  * library, the gpio library, and the adc library)
  *
+ * we also now use the CMSIS Driver API for access to the serial port (i.e. 
+ * the uart) and the ARM Compiler options to provide retargetting of printf
+ *
  * author:    Dr. Alex Shenfield
- * date:      01/09/2018
+ * date:      29/09/2020
  * purpose:   55-604481 embedded computer networks : lab 101
  */
 
@@ -19,8 +22,9 @@
 #include "adc.h"
 #include "gpio.h"
 
-// include the serial configuration files
-#include "serial.h"
+// stdout_init is defined in our configuration file (as part of the ARM
+// Compiler user code template
+extern int stdout_init(void);
 
 // map the led to GPIO PA8 and the potentiometer to PA0
 gpio_pin_t led = {PI_1, GPIOI, GPIO_PIN_1};
@@ -37,8 +41,8 @@ int main()
   HAL_Init();
   init_sysclk_216MHz();
   
-  // initialise the uart, adc and gpio pins
-  init_uart(9600);
+  // initialise the uart, adc and gpio pins	
+	stdout_init();	
   init_adc(pot);
   init_gpio(led, OUTPUT);
   
