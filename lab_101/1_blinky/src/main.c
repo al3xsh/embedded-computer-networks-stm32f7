@@ -5,7 +5,7 @@
  * the stm32f7xx hal libraries
  *
  * author:    Alex Shenfield
- * date:      01/09/2018
+ * date:      28/09/2020
  * purpose:   55-604481 embedded computer networks : lab 101
  */
 
