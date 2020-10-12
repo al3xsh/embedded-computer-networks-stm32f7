@@ -21,12 +21,12 @@
 
   <project>
     <PathAndName>.\4_pushbuttons\mdk-arm\pushbuttons.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
     <PathAndName>.\5_analog_blink_rate\mdk-arm\analog_blink.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
 </ProjectWorkspace>
