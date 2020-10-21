@@ -26,7 +26,7 @@
 // DECLARATIONS
 
 // stdout_init is defined in our configuration file (as part of the ARM
-// Compiler user code template
+// Compiler user code template)
 extern int stdout_init(void);
 
 // CODE
