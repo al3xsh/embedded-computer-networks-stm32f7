@@ -557,6 +557,12 @@
           <targetInfo name="ts_example"/>
         </targetInfos>
       </component>
+      <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="RTC" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL">
+        <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
+        <targetInfos>
+          <targetInfo name="ts_example"/>
+        </targetInfos>
+      </component>
       <component Cclass="Device" Cgroup="STM32Cube HAL" Csub="SDRAM" Cvendor="Keil" Cversion="1.2.8" condition="STM32F7 HAL DMA">
         <package name="STM32F7xx_DFP" schemaVersion="1.6.3" url="http://www.keil.com/pack/" vendor="Keil" version="2.13.0"/>
         <targetInfos>

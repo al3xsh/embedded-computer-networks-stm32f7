@@ -7,7 +7,7 @@ We will also be using the [SparkFun ESP8266 Arduino shields](https://learn.spark
 
 All labs will now use the CMSIS-Driver architecture and the MDK-ARM pack structure.
 
-*Note*: labs 102 and 103 are not yet updated for this acdemic year. I will be updating them as the semester progresses. In particular, lab 103 will be updated to use the CMSIS-RTOS2 API - rather than version 1 as it is at present.
+*Note*: lab 103 is not yet updated for this academic year - it needs updating to use the CMSIS-RTOS2 API - rather than version 1 as it is at present.
 
 (c) Dr. Alex Shenfield
 a.shenfield@shu.ac.uk
