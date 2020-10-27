@@ -1,0 +1,1 @@
+Make a clone of the previous project by copying the content of the 2_message_queues/ folder into here.
