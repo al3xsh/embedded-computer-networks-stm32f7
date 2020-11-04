@@ -13,6 +13,9 @@
  * purpose:   55-604481 embedded computer networks : lab 101
  */
 
+// include the c standard io library
+#include <stdio.h>
+
 // include the hal drivers
 #include "stm32f7xx_hal.h"
 
@@ -28,7 +31,7 @@ extern int stdout_init(void);
 
 // map the led to GPIO PA8 and the potentiometer to PA0
 gpio_pin_t led = {PI_1, GPIOI, GPIO_PIN_1};
-gpio_pin_t pot = {PF_8, GPIOF, GPIO_PIN_8};
+gpio_pin_t pot = {PA_0, GPIOA, GPIO_PIN_0};
 
 // declare our utility functions
 void configure_gpio(void);
