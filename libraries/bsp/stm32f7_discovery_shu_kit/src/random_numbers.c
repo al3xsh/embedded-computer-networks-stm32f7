@@ -1,32 +1,41 @@
 /*
  * random_numbers.c
  *
- * some utility functions for the management of random numbers
+ * some utility functions for the management of random numbers - now updated
+ * to allow access to the radndom number generator handle (needed for 
+ * hardware entropy generation in mbedTLS).
  *
  * author:  Dr. Alex Shenfield
- * date:    01/09/2018
+ * date:    30/11/2020
  */
  
 // include the shu library bsp random_number header
 #include "random_numbers.h"
 
+// initialise the handle to the random number generator
+RNG_HandleTypeDef rng_handle;
+
 // initialise the random number generator
 void init_random(void)
 {
-  __HAL_RCC_RNG_CLK_ENABLE();
-  RNG->CR |= RNG_CR_RNGEN;
+	// enable the rng clock
+	__HAL_RCC_RNG_CLK_ENABLE();
+	
+	// set the rng instance and initialise the peripheral
+	rng_handle.Instance = RNG;
+  HAL_RNG_Init(&rng_handle);
 }
   
 // get a random integer
 uint32_t get_random_int(void)
 {
-  while (!(RNG->SR & (RNG_SR_DRDY)));
+	uint32_t random_number = 0;
+  HAL_RNG_GenerateRandomNumber(&rng_handle, &random_number);
   return RNG->DR;
 }
 
 // get a random float (between 0 and 1)
 float get_random_float(void)
 {
-  while (!(RNG->SR & (RNG_SR_DRDY)));
-  return (RNG->DR / powf(2.0, 32.0));
+  return (get_random_int() / powf(2.0, 32.0));
 }

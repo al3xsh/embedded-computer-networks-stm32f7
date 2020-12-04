@@ -1,10 +1,12 @@
 /*
  * random_numbers.h
  *
- * some utility functions for the management of random numbers
+ * some utility functions for the management of random numbers - now updated
+ * to allow access to the radndom number generator handle (needed for 
+ * hardware entropy generation in mbedTLS).
  *
- * author:  alex shenfield
- * date:    01/09/2017
+ * author:  Dr. Alex Shenfield
+ * date:    30/11/2020
  */
  
 // define a symbol to prevent recursive inclusion
@@ -18,6 +20,9 @@
 // stm32f7 discovery board
 #include "stm32f7xx_hal.h"
 #include "pinmappings.h"
+
+// get an instance of the random number generator handle
+extern RNG_HandleTypeDef rng_handle;
 
 // expose the functions of this library
 
