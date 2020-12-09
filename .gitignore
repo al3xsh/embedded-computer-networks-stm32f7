@@ -38,4 +38,4 @@
 lab*solutions/
 
 # don't update my_credentials
-**/my_credentials.h
+my_credentials.h
