@@ -34,8 +34,9 @@
 *.map
 *.lst
 
-# ignore the lab solutions
+# ignore the lab solutions and the work in progress stuff
 lab*solutions/
+**/wip/
 
 # don't update my_credentials
 #my_credentials.h
