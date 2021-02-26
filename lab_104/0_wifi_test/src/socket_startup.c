@@ -25,7 +25,7 @@ extern ARM_DRIVER_WIFI Driver_WiFi0;
 
 // WIFI INITIALISATION UP CODE
 
-
+// scan the wifi networks in range
 int32_t scan_wifi(void)
 {
   ARM_WIFI_SCAN_INFO_t scan_info[8];
@@ -46,7 +46,6 @@ int32_t scan_wifi(void)
   }
   return 0;
 }
-
 
 // start up the wifi connection
 int32_t socket_startup(void)

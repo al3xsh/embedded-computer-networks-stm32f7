@@ -22,7 +22,6 @@
 extern int32_t scan_wifi(void);
 extern int32_t socket_startup(void);
 
-
 // MAIN THREAD
 
 // provide an increased stack size to the main thread

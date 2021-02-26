@@ -18,14 +18,4 @@
 #define PASSWORD       "Your password"
 #define SECURITY_TYPE   ARM_WIFI_SECURITY_WPA2
 
-//
-// NOTE - make sure this clientID is unique. i recommend using your student
-// id number
-//
-
-// mqtt credentials
-#define mqtt_clientid  "mqtt-client-id"
-#define mqtt_username  "mqtt-username"
-#define mqtt_password  ""
-
 #endif

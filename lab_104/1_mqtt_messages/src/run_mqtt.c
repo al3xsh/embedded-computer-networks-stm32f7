@@ -23,7 +23,7 @@
 #include "my_credentials.h"
 
 // define the mqtt server
-#define SERVER_NAME 	"mqtt.eclipse.org"
+#define SERVER_NAME 	"mqtt.eclipseprojects.io"
 #define SERVER_PORT 	8883
 
 // MQTT CALLBACK

@@ -161,7 +161,7 @@
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\src\socket_startup.c</Filename>
+          <Filename>&lt;1&gt;..\src\socket_startup.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\IoT_Data_Node\../src/socket_startup.c\35</Expression>
         </Bp>
@@ -179,7 +179,7 @@
         </Ww>
       </WatchWindow1>
       <ScvdPack>
-        <Filename>C:\Users\Alex Shenfield\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
+        <Filename>C:\Users\alexs\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
         <Type>ARM.CMSIS.5.7.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
@@ -373,7 +373,7 @@
 
   <Group>
     <GroupName>stm32f7_discovery_bsp_shu</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

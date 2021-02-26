@@ -2,8 +2,7 @@
  * run_mqtt.c
  *
  * this file contains the logic for connecting to an mqtt broker over tls
- * and sending / receiving messages (and taking action based on that 
- * information).
+ * and sending it some messages
  *
  * author:    Dr. Alex Shenfield
  * date:      17/11/2020
@@ -20,24 +19,17 @@
 // not using those ...)
 #include "certificates.h"
 
-// include our rtos objects
-#include "rtos_objects.h"
-
 // include my mqtt credentials
 #include "my_credentials.h"
 
-// include the shu gpio support
-#include "pinmappings.h"
-#include "gpio.h"
-
 // define the mqtt server
-#define SERVER_NAME 	"mqtt.eclipseprojects.io"
+#define SERVER_NAME 	"test.mosquitto.org"
 #define SERVER_PORT 	8883
 
-// MQTT CALLBACKS
+// MQTT CALLBACK
 
 // set up our message received callback (just dump the message to the screen)
-void message_received_cb(MessageData* data)
+void message_received(MessageData* data)
 {
   printf("message arrived on topic %.*s: %.*s\n",
          data->topicName->lenstring.len,
@@ -46,45 +38,15 @@ void message_received_cb(MessageData* data)
          (char *)data->message->payload);
 }
 
-// my light switch callback
-
-// light bulb
-gpio_pin_t led = {PB_14, GPIOB, GPIO_PIN_14};
-
-// set up light switch topic callback
-void light_switch_cb(MessageData* data)
-{
-  // get the message from the message data object
-  char message_text[128];
-  sprintf(message_text, "%.*s", data->message->payloadlen, (char *)data->message->payload);
-  //printf("DEBUG :%s:\n", message_text);
-
-  // parse the message payload
-  if(strcmp(message_text, "ON") == 0)
-  {
-    printf("turning on led\n");
-    write_gpio(led, HIGH);
-  }
-  else if(strcmp(message_text, "OFF") == 0)
-  {
-    printf("turning off led\n");
-    write_gpio(led, LOW);
-  }
-}
-
 // MQTT THREAD
 
 // set up the mqtt connection as a thread
-void mqtt_run_task(void *argument)
+void mqtt_setup_and_run_task(void *argument)
 {
   // initialise structures for the mqtt client and for the mqtt network
   // connection
   MQTTClient client;
   Network network;
-
-  // initialise the gpio for the light bulb
-  init_gpio(led, OUTPUT);
-  write_gpio(led, LOW);
 
   // establish a secured network connection to the broker
 
@@ -147,66 +109,41 @@ void mqtt_run_task(void *argument)
   // will be triggered everytime a message on that topic is received (here this
   // is "message_received" from earlier) and set the QoS level (here we are
   // using level 2 - but you need to check what your broker supports ...)
-  char general_topics[] = "ashenfield/sheffield-hallam/iot-mqtt/#";
-  if((rc = MQTTSubscribe(&client, general_topics, QOS2, message_received_cb)) != 0)
-  {
-    printf("return code from MQTT subscribe is %d\n", rc);
-  }
-
-  // subscribe to a light switch topic
-  char light_switch_topic[] = "ashenfield/sheffield-hallam/iot-mqtt/light-switch";
-  if((rc = MQTTSubscribe(&client, light_switch_topic, QOS2, light_switch_cb)) != 0)
+  char topic[] = "ashenfield/sheffield-hallam/iot-mqtt/#";
+  if((rc = MQTTSubscribe(&client, topic, QOS2, message_received)) != 0)
   {
     printf("return code from MQTT subscribe is %d\n", rc);
   }
 
   // publish messages
 
-  // run our main mqtt publish loop
-  while(1)
+  // send 10 messages to our broker
+  for(int count = 0; count < 10; count++)
   {
-    // button check
+    // initialise a character array for the message payload
+    char payload[30];
 
-    // check for button press (returning immediately)
-    uint32_t flag = osEventFlagsWait(button_flag, 0x01, osFlagsWaitAny, 0);
-    if(flag == 0x01)
+    // create the message (writing the data into the payload) and set up the
+    // publishing settings
+    MQTTMessage message;
+    message.qos = QOS1;
+    message.retained = 0;
+    message.payload = payload;
+    sprintf(payload, "message number %d", count);
+    message.payloadlen = strlen(payload);
+
+    // publish the message (printing the error if something went wrong)
+    char topic[] = "ashenfield/sheffield-hallam/iot-mqtt/status-message";
+    if((rc = MQTTPublish(&client, topic, &message)) != 0)
     {
-      // initialise a character array for the message payload
-      char payload[64];
-
-      // create the basic message and set up the publishing settings
-      MQTTMessage message;
-      message.qos = QOS1;
-      message.retained = 0;
-      message.payload = payload;
-
-      // send the light switch message
-
-      // write the data into the payload and send it
-      memset(payload, 0, sizeof(payload));
-      if(read_gpio(led))
-      {
-        sprintf(payload, "OFF");
-        message.payloadlen = strlen(payload);
-      }
-      else
-      {
-        sprintf(payload, "ON");
-        message.payloadlen = strlen(payload);
-      }
-
-      // publish the message (printing the error if something went wrong)
-      if((rc = MQTTPublish(&client, light_switch_topic, &message)) != 0)
-      {
-        printf("return code from MQTT publish is %d\n", rc);
-      }
+      printf("return code from MQTT publish is %d\n", rc);
     }
+
+    // delay for 1 second before sending the next message
+    osDelay(1000);
   }
 
-  // we don't ever get here - but could keep an error counter for our publish
-  // loops and exit if we have too many errors
-
-  //// disconnect from the network
-  //NetworkDisconnect(&network);
-  //printf("MQTT disconnected\n");
+  // disconnect from the network
+  NetworkDisconnect(&network);
+  printf("MQTT disconnected\n");
 }
