@@ -9,6 +9,8 @@
 
   <project>
     <PathAndName>.\1_blinky\mdk-arm\blinky.uvprojx</PathAndName>
+    <NodeIsActive>1</NodeIsActive>
+    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
@@ -21,8 +23,6 @@
 
   <project>
     <PathAndName>.\4_pushbuttons\mdk-arm\pushbuttons.uvprojx</PathAndName>
-    <NodeIsActive>1</NodeIsActive>
-    <NodeIsExpanded>1</NodeIsExpanded>
   </project>
 
   <project>
