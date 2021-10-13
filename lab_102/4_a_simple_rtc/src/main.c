@@ -6,7 +6,7 @@
  * library, the rtc library, and the gpio library)
  *
  * author:    Dr. Alex Shenfield
- * date:      05/10/2020
+ * date:      05/10/2021
  * purpose:   55-604481 embedded computer networks : lab 102
  */
 
@@ -41,10 +41,10 @@ int main()
 
   // set our current date
   rtc_date_t date;
-  date.day = RTC_WEEKDAY_MONDAY;
+  date.day = RTC_WEEKDAY_TUESDAY;
   date.day_date = 0x05;
   date.month = RTC_MONTH_OCTOBER;
-  date.year = 0x20;
+  date.year = 0x21;
 
   // ... and time
   rtc_time_t time;

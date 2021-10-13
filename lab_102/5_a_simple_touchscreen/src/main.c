@@ -4,7 +4,7 @@
  * this is the main simple touch screen application example
  *
  * author:    Dr. Alex Shenfield
- * date:      05/10/2020
+ * date:      05/10/2021
  * purpose:   55-604481 embedded computer networks : lab 102
  */
 
