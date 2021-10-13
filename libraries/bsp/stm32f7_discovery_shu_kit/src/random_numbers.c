@@ -2,7 +2,7 @@
  * random_numbers.c
  *
  * some utility functions for the management of random numbers - now updated
- * to allow access to the radndom number generator handle (needed for 
+ * to allow access to the random number generator handle (needed for 
  * hardware entropy generation in mbedTLS).
  *
  * author:  Dr. Alex Shenfield
