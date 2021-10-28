@@ -5,7 +5,7 @@
  * mail queue
  *
  * author:    Dr. Alex Shenfield
- * date:      22/10/2020
+ * date:      22/10/2021
  * purpose:   55-604481 embedded computer networks - lab 103
  */
 
@@ -38,9 +38,13 @@ void data_generation(void const *argument)
   // print a status message
   printf("data generation thread up and running ...\r\n");
 
-  // note - generally this (using a shared resource from multiple threads) is a
-  // really bad idea due to race conditions etc. - however, we can (probably)
-  // get away with it here as we are only doing it once
+  // note - generally this (using a shared resource - i.e. the usart for printf
+  // - from multiple threads) is a really bad idea due to race conditions etc. 
+	// however, we can (probably) get away with it here as we are only doing it 
+	// once before the data display thread is properly running.
+	//
+	// really we should protect access to the usart here with a mutex around the
+	// printf statement(s)
 
   // set up the gpio for the led and initialise the random number generator
   init_gpio(led1, OUTPUT);
@@ -66,7 +70,9 @@ void data_generation(void const *argument)
     msg.current = (1.0f / (random * i));
     msg.voltage = (5.0f / (random * i));
 
-    // put the data in the message queue and wait for one second
+    // put the data in the message queue and delay for one second (note: 
+		// osWaitForever here means "wait as long as it takes until there is space
+		// in the message queue)
     osMessageQueuePut(m_messages, &msg, osPriorityNormal, osWaitForever);
     osDelay(1000);
   }

@@ -16,6 +16,7 @@
  */
 
 // include the basic headers for the hal drivers
+#include "arm_acle.h"
 #include "stm32f7xx_hal.h"
 #include "cmsis_os2.h"
 

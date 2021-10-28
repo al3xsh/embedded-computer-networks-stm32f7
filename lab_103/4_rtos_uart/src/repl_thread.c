@@ -8,7 +8,7 @@
  * shell to accept and process a set of commands
  *
  * author:    Dr. Alex Shenfield
- * date:      22/10/2020
+ * date:      22/10/2021
  * purpose:   55-604481 embedded computer networks - lab 103
  */
 
@@ -17,6 +17,7 @@
 #include <string.h>
 
 // include the basic headers for the hal drivers and cmsis-rtos2
+#include "arm_compat.h"
 #include "stm32f7xx_hal.h"
 #include "cmsis_os2.h"
 

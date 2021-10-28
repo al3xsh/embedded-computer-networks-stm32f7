@@ -5,7 +5,7 @@
  * off
  *
  * author:    Dr. Alex Shenfield
- * date:      22/10/2020
+ * date:      22/10/2021
  * purpose:   55-604481 embedded computer networks - lab 103
  */
 
@@ -53,8 +53,8 @@ static const osMessageQueueAttr_t msq_q_attr =
 
 // OTHER DEFINES
 
-// stdout_init is defined in our configuration file (as part of the ARM
-// compiler user code template
+// stdout_init is defined in our configuration group (as part of the ARM
+// compiler user code template)
 extern int stdout_init(void);
 
 // APPLICATION MAIN THREAD
