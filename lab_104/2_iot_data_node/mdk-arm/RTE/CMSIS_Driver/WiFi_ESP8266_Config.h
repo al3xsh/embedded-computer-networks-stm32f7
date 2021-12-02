@@ -76,7 +76,7 @@
 // <i> Defines the size of one memory block in serial parser buffer.
 // <i> The total size of serial parser buffer is defined by memory block size and number of blocks.
 // <i> Default: 256
-#define WIFI_ESP8266_PARSER_BLOCK_SIZE      256
+#define WIFI_ESP8266_PARSER_BLOCK_SIZE      512
 
 // <o> Serial parser buffer block count
 // <i> Defines the number of memory blocks in serial parser buffer.

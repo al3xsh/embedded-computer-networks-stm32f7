@@ -28,7 +28,7 @@ extern ARM_DRIVER_WIFI Driver_WiFi0;
 // scan the wifi networks in range
 int32_t scan_wifi(void)
 {
-  ARM_WIFI_SCAN_INFO_t scan_info[8];
+  ARM_WIFI_SCAN_INFO_t scan_info[16];
  
   // print some status messages ...
   printf("\rscanning for WiFi networks ...\n");
@@ -36,7 +36,7 @@ int32_t scan_wifi(void)
   // initialise the wifi driver and scan for available networks
   Driver_WiFi0.Initialize(NULL);
   Driver_WiFi0.PowerControl(ARM_POWER_FULL);
-  int num = Driver_WiFi0.Scan(scan_info, 8U);   
+  int num = Driver_WiFi0.Scan(scan_info, 16U);   
   printf("\rfound %d WiFi networks\n", num);
   
   // print details of available WiFi networks
