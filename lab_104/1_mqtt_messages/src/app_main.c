@@ -45,7 +45,7 @@ static const osThreadAttr_t app_main_attr =
 static void app_main(void *argument)
 {
   // print a startup message
-  printf("MQTT over TLS using WiFi\r\n");
+  printf("MQTT using WiFi\r\n");
 
   // set up the network connection
   int32_t status = socket_startup();

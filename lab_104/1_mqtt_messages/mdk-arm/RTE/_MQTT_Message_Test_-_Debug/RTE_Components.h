@@ -16,15 +16,13 @@
  */
 #define CMSIS_device_header "stm32f7xx.h"
 
-/* ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.3 */
+/*  ARM::CMSIS:RTOS2:Keil RTX5:Library:5.5.3 */
 #define RTE_CMSIS_RTOS2                 /* CMSIS-RTOS2 */
         #define RTE_CMSIS_RTOS2_RTX5            /* CMSIS-RTOS2 Keil RTX5 */
-/* ARM::Security:mbed TLS:2.24.0 */
-#define RTE_Security_mbedTLS            /* Security mbed TLS */
-/* Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0 */
+/*  Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0 */
 #define RTE_Compiler_IO_STDOUT          /* Compiler I/O: STDOUT */
           #define RTE_Compiler_IO_STDOUT_ITM      /* Compiler I/O: STDOUT ITM */
-/* Keil::CMSIS Driver:USART:1.16.0 */
+/*  Keil::CMSIS Driver:USART:1.14.0 */
 #define RTE_Drivers_USART1              /* Driver USART1 */
         #define RTE_Drivers_USART2              /* Driver USART2 */
         #define RTE_Drivers_USART3              /* Driver USART3 */
@@ -33,37 +31,37 @@
         #define RTE_Drivers_USART6              /* Driver USART6 */
         #define RTE_Drivers_USART7              /* Driver USART7 */
         #define RTE_Drivers_USART8              /* Driver USART8 */
-/* Keil::CMSIS Driver:WiFi:ESP8266:UART:1.4.0 */
+/*  Keil::CMSIS Driver:WiFi:ESP8266:UART:1.4.0 */
 #define RTE_Drivers_WiFi_ESP8266_UART   /* Driver WiFi ESP8266 (UART) */
-/* Keil::Device:STM32Cube Framework:Classic:1.2.9 */
+/*  Keil::Device:STM32Cube Framework:Classic:1.2.8 */
 #define RTE_DEVICE_FRAMEWORK_CLASSIC
-/* Keil::Device:STM32Cube HAL:Common:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:Common:1.2.8 */
 #define RTE_DEVICE_HAL_COMMON
-/* Keil::Device:STM32Cube HAL:Cortex:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:Cortex:1.2.8 */
 #define RTE_DEVICE_HAL_CORTEX
-/* Keil::Device:STM32Cube HAL:DMA:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:DMA:1.2.8 */
 #define RTE_DEVICE_HAL_DMA
-/* Keil::Device:STM32Cube HAL:GPIO:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:GPIO:1.2.8 */
 #define RTE_DEVICE_HAL_GPIO
-/* Keil::Device:STM32Cube HAL:PWR:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:PWR:1.2.8 */
 #define RTE_DEVICE_HAL_PWR
-/* Keil::Device:STM32Cube HAL:RCC:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:RCC:1.2.8 */
 #define RTE_DEVICE_HAL_RCC
-/* Keil::Device:STM32Cube HAL:RNG:1.2.9 */
+/*  Keil::Device:STM32Cube HAL:RNG:1.2.8 */
 #define RTE_DEVICE_HAL_RNG
-/* Keil::Device:STM32Cube LL:Common:1.2.9 */
+/*  Keil::Device:STM32Cube LL:Common:1.2.8 */
 #define RTE_DEVICE_LL_COMMON
-/* Keil::Device:STM32Cube LL:PWR:1.2.9 */
+/*  Keil::Device:STM32Cube LL:PWR:1.2.8 */
 #define RTE_DEVICE_LL_PWR
-/* Keil::Device:STM32Cube LL:RCC:1.2.9 */
+/*  Keil::Device:STM32Cube LL:RCC:1.2.8 */
 #define RTE_DEVICE_LL_RCC
-/* Keil::Device:STM32Cube LL:UTILS:1.2.9 */
+/*  Keil::Device:STM32Cube LL:UTILS:1.2.8 */
 #define RTE_DEVICE_LL_UTILS
-/* Keil::Device:Startup:1.2.5 */
+/*  Keil::Device:Startup:1.2.5 */
 #define RTE_DEVICE_STARTUP_STM32F7XX    /* Device Startup for STM32F7 */
-/* MDK-Packs::IoT Utility:MQTTPacket:1.1.0 */
+/*  MDK-Packs::IoT Utility:MQTTPacket:1.1.0 */
 #define RTE_IoT_MQTTPacket              /* IoT MQTTPacket */
-/* MDK-Packs::IoT Utility:Socket:WiFi:1.0.0 */
+/*  MDK-Packs::IoT Utility:Socket:WiFi:1.0.0 */
 #define RTE_IoT_Socket                  /* IoT Socket */
         #define RTE_IoT_Socket_WiFi             /* IoT Socket: WiFi */
 

@@ -1,7 +1,7 @@
 /*
  * run_mqtt.c
  *
- * this file contains the logic for connecting to an mqtt broker over tls
+ * this file contains the logic for connecting to an mqtt broker
  * and sending / receiving messages (and taking action based on that 
  * information).
  *
@@ -23,15 +23,12 @@
 // include our rtos objects
 #include "rtos_objects.h"
 
-// include my mqtt credentials
-#include "my_credentials.h"
-
 // include the shu gpio support
 #include "pinmappings.h"
 #include "gpio.h"
 
 // define the mqtt server
-#define SERVER_NAME 	"mqtt.eclipseprojects.io"
+#define SERVER_NAME 	"test.mosquitto.org"
 #define SERVER_PORT 	8883
 
 // MQTT CALLBACKS
@@ -87,18 +84,15 @@ void mqtt_run_task(void *argument)
   init_gpio(led, OUTPUT);
   write_gpio(led, LOW);
 
-  // establish a secured network connection to the broker
-
-  // set up the tls certificate
-  TLScert tlscert = {(char *)CA_Cert, NULL, NULL};
+  // establish an unsecured network connection to the broker
 
   // initialise the network connection structure
   NetworkInit(&network);
 
-  // try to connect to the mqtt broker using tls and - if it fails - print out
+  // try to connect to the mqtt broker and - if it fails - print out
   // the reason why
   int rc = 0;
-  if((rc = NetworkConnectTLS(&network, SERVER_NAME, SERVER_PORT, &tlscert)) != 0)
+  if((rc = NetworkConnect(&network, SERVER_NAME, SERVER_PORT)) != 0)
   {
     printf("\rnetwork connection failed - "
            "return code from network connect is %d\r\n", rc);

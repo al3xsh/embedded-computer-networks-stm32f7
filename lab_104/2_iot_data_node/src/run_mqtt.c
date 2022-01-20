@@ -18,16 +18,12 @@
 // include our rtos objects (including the message object)
 #include "rtos_objects.h"
 
-// include the root ca certificate (and client certificate and key - but we're
-// not using those ...)
-#include "certificates.h"
-
 // include my mqtt credentials
 #include "my_credentials.h"
 
 // define the mqtt server
-#define SERVER_NAME 	"mqtt.eclipseprojects.io"
-#define SERVER_PORT 	8883
+#define SERVER_NAME 	"test.mosquitto.org"
+#define SERVER_PORT 	1883
 
 // MQTT CALLBACK
 
@@ -51,18 +47,15 @@ void mqtt_run_task(void *argument)
   MQTTClient client;
   Network network;
 
-  // establish a secured network connection to the broker
-
-  // set up the tls certificate
-  TLScert tlscert = {(char *)CA_Cert, NULL, NULL};
+  // establish an unsecured network connection to the broker
 
   // initialise the network connection structure
   NetworkInit(&network);
 
-  // try to connect to the mqtt broker using tls and - if it fails - print out
+  // try to connect to the mqtt broker and - if it fails - print out
   // the reason why
   int rc = 0;
-  if((rc = NetworkConnectTLS(&network, SERVER_NAME, SERVER_PORT, &tlscert)) != 0)
+  if((rc = NetworkConnect(&network, SERVER_NAME, SERVER_PORT)) != 0)
   {
     printf("\rnetwork connection failed - "
            "return code from network connect is %d\r\n", rc);

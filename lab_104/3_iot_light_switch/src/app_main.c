@@ -77,7 +77,7 @@ static void app_main(void *argument)
 {
   // print a startup message
 	printf("\r\n");
-  printf("\rMQTT over TLS using WiFi\r\n");
+  printf("\rMQTT using WiFi\r\n");
 
   // set up the network connection
   int32_t status = socket_startup();

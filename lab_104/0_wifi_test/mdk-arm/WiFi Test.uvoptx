@@ -162,7 +162,7 @@
         </Ww>
       </WatchWindow1>
       <ScvdPack>
-        <Filename>C:\Users\Alex Shenfield\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
+        <Filename>C:\Keil_v5\Packs\ARM\CMSIS\5.8.0\CMSIS\RTOS2\RTX\RTX5.scvd</Filename>
         <Type>ARM.CMSIS.5.8.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
