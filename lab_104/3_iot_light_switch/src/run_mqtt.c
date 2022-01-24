@@ -16,20 +16,19 @@
 // include the paho mqtt client
 #include "MQTTClient.h"
 
-// include the root ca certificate (and client certificate and key - but we're
-// not using those ...)
-#include "certificates.h"
-
 // include our rtos objects
 #include "rtos_objects.h"
+
+// include my mqtt credentials
+#include "my_credentials.h"
 
 // include the shu gpio support
 #include "pinmappings.h"
 #include "gpio.h"
 
 // define the mqtt server
-#define SERVER_NAME 	"test.mosquitto.org"
-#define SERVER_PORT 	8883
+#define SERVER_NAME 	"broker.hivemq.com"
+#define SERVER_PORT 	1883
 
 // MQTT CALLBACKS
 

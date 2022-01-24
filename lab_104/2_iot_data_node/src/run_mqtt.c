@@ -1,7 +1,7 @@
 /*
  * run_mqtt.c
  *
- * this file contains the logic for connecting to an mqtt broker over tls
+ * this file contains the logic for connecting to an mqtt broker
  * and sending it some messages
  *
  * author:    Dr. Alex Shenfield
@@ -22,7 +22,7 @@
 #include "my_credentials.h"
 
 // define the mqtt server
-#define SERVER_NAME 	"test.mosquitto.org"
+#define SERVER_NAME 	"broker.hivemq.com"
 #define SERVER_PORT 	1883
 
 // MQTT CALLBACK
